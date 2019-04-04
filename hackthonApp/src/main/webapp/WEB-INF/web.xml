@@ -16,10 +16,11 @@
     <servlet-name>dispatcherServlet</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
-  <context-param>
-    <param-name>spring.profiles.active</param-name>
-    <param-value>dev</param-value>
-  </context-param>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>/pages/*</url-pattern>
+  </servlet-mapping>
+
 
   <!--
       This is useful because current browsers typically do not
