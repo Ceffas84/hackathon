@@ -1,4 +1,4 @@
-package org.academiadecodigo.asciimos.bravers.hackathonapp.models.mood;
+package org.academiadecodigo.asciimos.bravers.hackathonapp.models.moods;
 
 import java.util.HashMap;
 import java.util.Map;

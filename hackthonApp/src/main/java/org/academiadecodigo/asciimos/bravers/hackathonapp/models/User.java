@@ -2,6 +2,7 @@ package org.academiadecodigo.asciimos.bravers.hackathonapp.models;
 
 public class User {
 
+    private Integer id;
     private Day day;
 
     public User(Day day) {
@@ -12,4 +13,15 @@ public class User {
         return day;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setDay(Day day) {
+        this.day = day;
+    }
 }

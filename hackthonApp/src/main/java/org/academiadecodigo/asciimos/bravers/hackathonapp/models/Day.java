@@ -1,6 +1,7 @@
 package org.academiadecodigo.asciimos.bravers.hackathonapp.models;
 
-import org.academiadecodigo.asciimos.bravers.hackathonapp.models.mood.Mood;
+
+import org.academiadecodigo.asciimos.bravers.hackathonapp.models.moods.Mood;
 
 import java.util.Date;
 

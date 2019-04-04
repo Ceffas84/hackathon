@@ -1,4 +1,4 @@
-package org.academiadecodigo.asciimos.bravers.hackathonapp.models.mood;
+package org.academiadecodigo.asciimos.bravers.hackathonapp.models.moods;
 
 public enum MoodType {
 
