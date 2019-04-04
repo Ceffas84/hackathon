@@ -6,7 +6,7 @@
 .background-text {
     color: white;
     position: absolute;
-    margin-top: 110px;
+    margin-top: 205px;
     margin-left: 250px;
     text-align: center;
     font-family: 'Muli', sans-serif;
@@ -17,7 +17,7 @@
 .down {
     color: white;
     position: absolute;
-    margin-top: 1293px;
+    margin-top: 1393px;
     margin-left: 470px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -27,7 +27,7 @@
 .up {
     color: white;
     position: absolute;
-    margin-top: 844px;
+    margin-top: 944px;
     margin-left: 500px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -37,7 +37,7 @@
 .cold {
     color: white;
     position: absolute;
-    margin-top: 1070px;
+    margin-top: 1170px;
     margin-left: 485px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -47,7 +47,7 @@
 .boldy {
     color: white;
     position: absolute;
-    margin-top: 615px;
+    margin-top: 715px;
     margin-left: 460px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -56,7 +56,7 @@
 
 .square-first {
     position: absolute;
-    margin-top: 570px;
+    margin-top: 670px;
     margin-left: 300px;
     text-align: center;
     width: 610px;
@@ -68,7 +68,7 @@
 
 .square-second {
     position: absolute;
-    margin-top: 796px;
+    margin-top: 896px;
     margin-left: 300px;
     text-align: center;
     width: 610px;
@@ -80,7 +80,7 @@
 
 .square-third {
     position: absolute;
-    margin-top: 1026px;
+    margin-top: 1126px;
     margin-left: 300px;
     text-align: center;
     width: 610px;
@@ -92,7 +92,7 @@
 
 .square-four {
     position: absolute;
-    margin-top: 1252px;
+    margin-top: 1352px;
     margin-left: 300px;
     text-align: center;
     width: 610px;
