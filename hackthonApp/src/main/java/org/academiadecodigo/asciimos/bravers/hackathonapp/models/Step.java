@@ -1,4 +1,0 @@
-package org.academiadecodigo.asciimos.bravers.hackathonapp.models;
-
-public class Step {
-}

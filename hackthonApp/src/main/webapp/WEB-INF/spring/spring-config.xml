@@ -12,6 +12,11 @@
     <!-- Base package to search for spring beans -->
     <context:component-scan base-package="org.academiadecodigo.asciimos.bravers"/>
 
-
+    <mvc:view-controller path="/" view-name="homepage"/>
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/resources/"/>
+        <property name="suffix" value=".html"/>
+    </bean>
+    <mvc:resources mapping="/resources/**" location="WEB-INF/resources/"/>
 
 </beans>
