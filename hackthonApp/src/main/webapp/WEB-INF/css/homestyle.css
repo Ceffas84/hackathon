@@ -1,8 +1,6 @@
 .background-firstpage {
     width: 1200px;
-    height: 1743px;
-    background-color: orange;
-    opacity: 10;
+    height: 2132px;
 }
 
 .background-borderradius {
@@ -10,14 +8,14 @@
     height: 480px;
     position: absolute;
     margin-top: 240px;
-    margin-left: 250px;
+    margin-left: 360px;
 }
 
 .margin-text {
     color: white;
     position: absolute;
     margin-top: 790px;
-    margin-left: 285px;
+    margin-left: 405px;
     text-align: center;
 }
 
@@ -28,10 +26,10 @@
 
 .spinner-border {
     position: absolute;
-    bottom: 65px;
-    left: 455px;
+    bottom: 0px;
+    left: 560px;
     width: 100px;
     height: 100px;
-    z-index: 0;
+    z-index: 1000;
     color: white;
 }

@@ -1,7 +1,7 @@
 setTimeout(function(){
     $("body").fadeOut("Slow");
-    }, 5000);
+    }, 511000);
 
 setTimeout(function(){
     window.location.href = "registration.html";
-    }, 5000);
+    }, 115000);

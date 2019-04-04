@@ -6,9 +6,98 @@
 .background-text {
     color: white;
     position: absolute;
-    margin-top: 120px;
-    margin-left: 140px;
+    margin-top: 110px;
+    margin-left: 250px;
     text-align: center;
-    font-family: 'Quattrocento Sans', sans-serif;
-    font-size: 75px;
+    font-family: 'Muli', sans-serif;
+    font-size: 100px;
+    text-align: center;
+}
+
+.down {
+    color: white;
+    position: absolute;
+    margin-top: 1293px;
+    margin-left: 470px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+}
+
+.up {
+    color: white;
+    position: absolute;
+    margin-top: 844px;
+    margin-left: 500px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+}
+
+.cold {
+    color: white;
+    position: absolute;
+    margin-top: 1070px;
+    margin-left: 485px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+}
+
+.boldy {
+    color: white;
+    position: absolute;
+    margin-top: 615px;
+    margin-left: 460px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+}
+
+.square-first {
+    position: absolute;
+    margin-top: 570px;
+    margin-left: 300px;
+    text-align: center;
+    width: 610px;
+    height: 150px;
+    border-radius: 15px;
+    opacity: 0.3;
+    border: 5px solid black;
+}
+
+.square-second {
+    position: absolute;
+    margin-top: 796px;
+    margin-left: 300px;
+    text-align: center;
+    width: 610px;
+    height: 150px;
+    border-radius: 15px;
+    opacity: 0.3;
+    border: 5px solid black;
+}
+
+.square-third {
+    position: absolute;
+    margin-top: 1026px;
+    margin-left: 300px;
+    text-align: center;
+    width: 610px;
+    height: 150px;
+    border-radius: 15px;
+    opacity: 0.3;
+    border: 5px solid black;
+}
+
+.square-four {
+    position: absolute;
+    margin-top: 1252px;
+    margin-left: 300px;
+    text-align: center;
+    width: 610px;
+    height: 150px;
+    border-radius: 15px;
+    opacity: 0.3;
+    border: 5px solid black;
 }
