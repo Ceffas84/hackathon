@@ -1,0 +1,37 @@
+.background-firstpage {
+    width: 1200px;
+    height: 1743px;
+    background-color: orange;
+    opacity: 10;
+}
+
+.background-borderradius {
+    width: 480px;
+    height: 480px;
+    position: absolute;
+    margin-top: 240px;
+    margin-left: 250px;
+}
+
+.margin-text {
+    color: white;
+    position: absolute;
+    margin-top: 790px;
+    margin-left: 285px;
+    text-align: center;
+}
+
+.font {
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 50px;
+}
+
+.spinner-border {
+    position: absolute;
+    bottom: 65px;
+    left: 455px;
+    width: 100px;
+    height: 100px;
+    z-index: 0;
+    color: white;
+}
