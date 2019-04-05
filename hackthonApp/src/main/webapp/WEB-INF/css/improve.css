@@ -19,7 +19,7 @@
     margin-top: 1203px;
     margin-left: 405px;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Muli', sans-serif;
     font-size: 60px;
 }
 
@@ -29,7 +29,7 @@
     margin-top: 744px;
     margin-left: 515px;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Muli', sans-serif;
     font-size: 60px;
 }
 
@@ -52,7 +52,6 @@
     height: 168px;
     border-radius: 15px;
     opacity: 0.3;
-    border: 5px solid black;
 }
 
 .square-second {
@@ -64,7 +63,6 @@
     height: 168px;
     border-radius: 15px;
     opacity: 0.3;
-    border: 5px solid black;
 }
 
 .square-third {
@@ -76,7 +74,6 @@
     height: 168px;
     border-radius: 15px;
     opacity: 0.3;
-    border: 5px solid black;
 }
 
 .square-four {
@@ -91,7 +88,35 @@
     border: 5px solid black;
 }
 
-.square-first:hover + div {
-    opacity: 0.6;
-    filter: alpha(opacity=0.6);
+.white-border-first {
+    position: absolute;
+    margin-top: 700px;
+    margin-left: 265px;
+    text-align: center;
+    width: 684px;
+    height: 168px;
+    border-radius: 15px;
+    border: 5px solid white;
+}
+
+.white-border-second {
+    position: absolute;
+    margin-top: 926px;
+    margin-left: 265px;
+    text-align: center;
+    width: 684px;
+    height: 168px;
+    border-radius: 15px;
+    border: 5px solid white;
+}
+
+.white-border-third {
+    position: absolute;
+    margin-top: 1156px;
+    margin-left: 265px;
+    text-align: center;
+    width: 684px;
+    height: 168px;
+    border-radius: 15px;
+    border: 5px solid white;
 }

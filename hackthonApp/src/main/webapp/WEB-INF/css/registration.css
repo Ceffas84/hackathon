@@ -62,7 +62,7 @@
     height: 168px;
     border-radius: 15px;
     opacity: 0.3;
-    border: 5px solid black;
+
 }
 
 .square-second {
@@ -74,7 +74,6 @@
     height: 168px;
     border-radius: 15px;
     opacity: 0.3;
-    border: 5px solid black;
 }
 
 .square-third {
@@ -86,7 +85,6 @@
     height: 168px;
     border-radius: 15px;
     opacity: 0.3;
-    border: 5px solid black;
 }
 
 .square-four {
@@ -96,7 +94,49 @@
     text-align: center;
     width: 684px;
     height: 168px;
-    border-radius: 15px;
     opacity: 0.3;
-    border: 5px solid black;
+}
+
+.white-border-first {
+    position: absolute;
+    margin-top: 700px;
+    margin-left: 265px;
+    text-align: center;
+    width: 684px;
+    height: 168px;
+    border-radius: 15px;
+    border: 5px solid white;
+}
+
+.white-border-second {
+    position: absolute;
+    margin-top: 926px;
+    margin-left: 265px;
+    text-align: center;
+    width: 684px;
+    height: 168px;
+    border-radius: 15px;
+    border: 5px solid white;
+}
+
+.white-border-third {
+    position: absolute;
+    margin-top: 1156px;
+    margin-left: 265px;
+    text-align: center;
+    width: 684px;
+    height: 168px;
+    border-radius: 15px;
+    border: 5px solid white;
+}
+
+.white-border-four {
+    position: absolute;
+    margin-top: 1382px;
+    margin-left: 265px;
+    text-align: center;
+    width: 684px;
+    height: 168px;
+    border-radius: 15px;
+    border: 5px solid white;
 }
