@@ -4,11 +4,12 @@
 }
 
 .background-borderradius {
-    width: 480px;
-    height: 480px;
     position: absolute;
-    margin-top: 240px;
-    margin-left: 360px;
+    top: 270px;
+    right: 2px;
+    width: 1300px;
+    height: 1400px;
+    color: white;
 }
 
 .margin-text {
