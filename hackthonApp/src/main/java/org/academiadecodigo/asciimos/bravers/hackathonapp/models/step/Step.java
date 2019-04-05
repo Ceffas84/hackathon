@@ -1,10 +1,13 @@
 package org.academiadecodigo.asciimos.bravers.hackathonapp.models.step;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Step {
 
     private boolean isAchieved;
     private String message;
-    private Integer dificultyLevel;
+    //private Integer dificultyLevel;
 
 
     public Step (boolean isAchieved, String message) {

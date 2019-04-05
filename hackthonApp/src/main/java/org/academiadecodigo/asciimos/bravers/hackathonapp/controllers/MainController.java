@@ -3,6 +3,7 @@ package org.academiadecodigo.asciimos.bravers.hackathonapp.controllers;
 
 import org.academiadecodigo.asciimos.bravers.hackathonapp.models.ImprovementField;
 import org.academiadecodigo.asciimos.bravers.hackathonapp.services.DayService;
+import org.academiadecodigo.asciimos.bravers.hackathonapp.services.StepService;
 import org.academiadecodigo.asciimos.bravers.hackathonapp.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,6 +15,7 @@ public class MainController {
 
     DayService dayService;
     UserService userService;
+    StepService stepService;
 
     @Autowired
     public void setDayService(DayService dayService) {
@@ -23,6 +25,11 @@ public class MainController {
     @Autowired
     public void setUserService(UserService userService) {
         this.userService = userService;
+    }
+
+    @Autowired
+    public void setStepService(StepService stepService) {
+        this.stepService = stepService;
     }
 
     @GetMapping(path = "user")
@@ -56,8 +63,9 @@ public class MainController {
     }
 
     @PostMapping(path = "stepOne/{boolean}")
-    public String getStepTwo(@PathVariable Boolean b) {
+    public String getStepTwo(@PathVariable(name = "boolean") Boolean b) {
         if(b){
+            stepService.turnToAchieved();
             userService.setPoints();
             return "redirect:/step2";
         }
@@ -65,8 +73,9 @@ public class MainController {
     }
 
     @PostMapping(path = "stepTwo/{boolean}")
-    public String getStepThree(@PathVariable Boolean b) {
+    public String getStepThree(@PathVariable(name = "boolean") Boolean b) {
         if(b){
+            stepService.turnToAchieved();
             userService.setPoints();
             return "redirect:/step3";
         }
@@ -74,8 +83,12 @@ public class MainController {
     }
 
     @PostMapping(path = "stepThree/{boolean}")
-    public String get(@PathVariable Boolean b) {
+    public String get(@PathVariable(name = "boolean") Boolean b) {
+
+
+
         if(b){
+            stepService.turnToAchieved();
             userService.setPoints();
             return "redirect:/finalMood";
         }
