@@ -32,24 +32,29 @@ public class MainController {
         this.stepService = stepService;
     }
 
-    @GetMapping(path = "user")
-    public String getUser() {
+    @GetMapping(path = {"/", "homepage"})
+    public String homepage(){
         dayService.createMoodMap();
         userService.createUser();
         userService.setDay();
-        return "/initialMood";
+        return "pages/homepage";
+    }
+
+    @GetMapping(path = "showInitialMood")
+    public String showInitialMood() {
+        return "pages/initialMood";
     }
 
     @GetMapping(path = "initialMood{mood}")
     public String setUserMood(@PathVariable(name = "mood") Integer mood) {
         dayService.setInitialMood(mood);
-        return "redirect:/field";
+        return "redirect:showField";
     }
 
     @GetMapping(path = "showField")
     public String showFields() {
         dayService.createStepList();
-        return "/field";
+        return "pages/field";
     }
 
 
@@ -61,7 +66,7 @@ public class MainController {
 
     @GetMapping(path = "showStep1")
     public String getStepOne() {
-        return "/step1";
+        return "pages/step1";
     }
 
     @GetMapping(path = "step1")
@@ -76,7 +81,7 @@ public class MainController {
 
     @GetMapping(path = "showStep2")
     public String showStepTwo() {
-        return "/step2";
+        return "pages/step2";
     }
 
     @GetMapping(path = "step2")
@@ -91,7 +96,7 @@ public class MainController {
 
     @GetMapping(path = "showStep3")
     public String showStepThree() {
-        return "/step3";
+        return "pages/step3";
     }
 
     @GetMapping(path = "step3")
@@ -110,13 +115,13 @@ public class MainController {
 
     @GetMapping(path = "failPage")
     public String showFailPage() {
-        return "/failPage";
+        return "pages/failPage";
     }
 
 
     @GetMapping(path = "showFinalMood")
     public String showFinalMood() {
-        return "/finalMood";
+        return "pages/finalMood";
     }
 
     @GetMapping(path = "finalMood{mood}")
@@ -125,8 +130,8 @@ public class MainController {
         return "redirect:/graphic";
     }
 
-    @GetMapping(path = "graphic")
+    @GetMapping(path = "showGraphic")
     public String showGraphic() {
-        return "/graphic";
+        return "pages/graphic";
     }
 }
