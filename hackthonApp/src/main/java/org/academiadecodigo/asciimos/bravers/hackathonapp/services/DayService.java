@@ -26,4 +26,16 @@ public class DayService {
     public void setImprovementField(ImprovementField improvementField) {
         day.setImprovementField(improvementField);
     }
+
+    public void createMoodMap() {
+        day.createMoodMap();
+    }
+
+    public void createStepList() {
+        day.createStepList();
+    }
+
+    public void setFinalMood(Integer key) {
+        day.setFinalMood(key);
+    }
 }

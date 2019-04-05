@@ -36,17 +36,19 @@ public class MainController {
     public String getUser() {
         userService.createUser();
         userService.setDay();
+        dayService.createMoodMap();
         return "/initialMood";
     }
 
     @PostMapping(path = "user/initialMood")
-    public String setUserMood(@ModelAttribute("key") Integer number) {
-        dayService.setInitialMood(number);
+    public String setUserMood(@ModelAttribute("key") Integer key) {
+        dayService.setInitialMood(key);
         return "redirect:/field";
     }
 
     @GetMapping(path = "field")
     public String showFields() {
+        dayService.createStepList();
         return "/field";
     }
 
@@ -98,4 +100,19 @@ public class MainController {
         return "redirect:/failPage";
     }
 
+    @GetMapping(path = "finalMood")
+    public String showFinalMood() {
+        return "/finalMood";
+    }
+
+    @PostMapping(path = "user/finalMood")
+    public String setUserFinalMood(@ModelAttribute("key") Integer key) {
+        dayService.setFinalMood(key);
+        return "redirect:/graphic";
+    }
+
+    @GetMapping(path = "graphic")
+    public String showGraphic() {
+        return "/graphic";
+    }
 }

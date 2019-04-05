@@ -43,4 +43,12 @@ public class Day {
     public void setFinalMood(Integer key) {
         this.finalMood = mood.getMoodType(key).getMoodString();
     }
+
+    public void createMoodMap() {
+        mood.populateMap();
+    }
+
+    public void createStepList() {
+        improvementField.populateList();
+    }
 }
