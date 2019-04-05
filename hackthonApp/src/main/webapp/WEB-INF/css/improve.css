@@ -13,41 +13,31 @@
     font-size: 90px;
 }
 
-.down {
+.envi {
     color: white;
     position: absolute;
-    margin-top: 1423px;
-    margin-left: 455px;
+    margin-top: 1203px;
+    margin-left: 405px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 60px;
 }
 
-.up {
+.social {
     color: white;
     position: absolute;
-    margin-top: 974px;
-    margin-left: 490px;
+    margin-top: 744px;
+    margin-left: 515px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 60px;
 }
 
-.cold {
+.int {
     color: white;
     position: absolute;
-    margin-top: 1200px;
-    margin-left: 470px;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 60px;
-}
-
-.boldy {
-    color: white;
-    position: absolute;
-    margin-top: 745px;
-    margin-left: 440px;
+    margin-top: 975px;
+    margin-left: 450px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 60px;
