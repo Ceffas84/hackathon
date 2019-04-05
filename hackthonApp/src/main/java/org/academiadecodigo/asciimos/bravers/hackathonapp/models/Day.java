@@ -2,9 +2,11 @@ package org.academiadecodigo.asciimos.bravers.hackathonapp.models;
 
 
 import org.academiadecodigo.asciimos.bravers.hackathonapp.models.moods.Mood;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
+@Component
 public class Day {
 
     private Date date;
@@ -14,8 +16,8 @@ public class Day {
     private Mood mood;
 
 
-    public Day (Date date) {
-        this.date = date;
+    public Day () {
+        date = new Date();
     }
 
     public ImprovementField getImprovementField() {
