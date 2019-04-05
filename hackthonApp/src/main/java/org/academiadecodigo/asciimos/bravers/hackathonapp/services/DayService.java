@@ -35,6 +35,10 @@ public class DayService {
         day.createStepList();
     }
 
+    public void destroyStepList() {
+        day.destroyStepList();
+    }
+
     public void setFinalMood(Integer mood) {
         day.setFinalMood(mood);
     }

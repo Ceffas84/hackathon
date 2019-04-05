@@ -56,6 +56,10 @@ public class Day {
         mood.populateMap();
     }
 
+    public void destroyStepList() {
+        improvementField.destroyStepList();
+    }
+
     public void createStepList() {
         improvementField.populateList();
     }

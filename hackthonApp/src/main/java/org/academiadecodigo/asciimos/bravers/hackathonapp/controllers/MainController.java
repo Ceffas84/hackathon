@@ -1,6 +1,7 @@
 package org.academiadecodigo.asciimos.bravers.hackathonapp.controllers;
 
 
+import org.academiadecodigo.asciimos.bravers.hackathonapp.factories.StepFactory;
 import org.academiadecodigo.asciimos.bravers.hackathonapp.models.ImprovementField;
 import org.academiadecodigo.asciimos.bravers.hackathonapp.services.DayService;
 import org.academiadecodigo.asciimos.bravers.hackathonapp.services.StepService;
@@ -54,6 +55,7 @@ public class MainController {
     @GetMapping(path = "showField")
     public String showFields() {
         dayService.createStepList();
+        StepFactory.resetCount();
         return "pages/field";
     }
 
@@ -132,6 +134,7 @@ public class MainController {
 
     @GetMapping(path = "showGraphic")
     public String showGraphic() {
+        dayService.destroyStepList();
         return "pages/graphic";
     }
 }

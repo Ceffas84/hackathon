@@ -19,4 +19,8 @@ public class StepFactory {
         return STEP;
     }
 
+    public static void resetCount() {
+        count = 0;
+    }
+
 }

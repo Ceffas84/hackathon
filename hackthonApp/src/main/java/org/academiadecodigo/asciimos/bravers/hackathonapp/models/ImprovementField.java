@@ -11,15 +11,20 @@ import java.util.List;
 public class ImprovementField {
 
     private List<Step> stepsList;
+    private int count;
 
     public List<Step> populateList() {
         stepsList = new LinkedList<>();
 
-        for (int i = 0; i < 3; i++) {
+        for (count = 0; count < 3; count++) {
             stepsList.add(StepFactory.getStep());
         }
+        count = 0;
         return stepsList;
     }
 
+    public void destroyStepList() {
+        stepsList.clear();
+    }
 
 }
