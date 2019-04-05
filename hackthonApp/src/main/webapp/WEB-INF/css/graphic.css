@@ -1,4 +1,58 @@
-.teste {
-    width: 477px;
-    height: 477px;
+.initial {
+    width: 377px;
+    height: 377px;
+    position: absolute;
+    top: 190px;
+    left: 305px;
+}
+
+.background {
+    width: 980px;
+    height: 1740px;
+}
+
+.final {
+    width: 377px;
+    height: 377px;
+    position: absolute;
+    top: 800px;
+    left: 305px;
+}
+
+.mood-result {
+    position: absolute;
+    top: 590px;
+    left: 405px;
+    color: white;
+    font-weight: 100;
+}
+
+.mood-result-two {
+    position: absolute;
+    top: 1205px;
+    left: 405px;
+    color: white;
+    font-weight: 100;
+}
+
+#t {
+    position: absolute;
+    bottom: 50px;
+    left: 95px;
+    width: 790px;
+    height: 120px;
+    color: white;
+    border: 3px solid white;
+    font-size: 50px;
+    border-radius: 10px;
+    font-weight: 100;
+}
+
+.result {
+    position: absolute;
+    top: 80px;
+    left: 405px;
+    color: white;
+    font-size: 60px;
+    font-weight: 200;
 }
