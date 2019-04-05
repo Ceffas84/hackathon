@@ -1,16 +1,14 @@
 package org.academiadecodigo.asciimos.bravers.hackathonapp.models;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Entity;
 
 @Component
 public class User {
 
     private Integer id;
-
-
-    private Integer points;
+    private int points;
     private Day day;
 
     public User() {
@@ -32,14 +30,11 @@ public class User {
         this.day = day;
     }
 
-    public Integer getPoints() {
+    public int getPoints() {
         return points;
     }
 
-    public void setPoints() {
-        if (points == 0) {
-            points = points + 2;
-        }
-        points = points * 2;
+    public void setPoints(int points) {
+        this.points = points;
     }
 }

@@ -9,6 +9,9 @@ public class Step {
     private String message;
     //private Integer dificultyLevel;
 
+    public Step() {
+    }
+
 
     public Step (boolean isAchieved, String message) {
         this.isAchieved = isAchieved;

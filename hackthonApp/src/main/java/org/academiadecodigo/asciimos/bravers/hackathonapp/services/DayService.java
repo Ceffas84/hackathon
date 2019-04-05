@@ -19,8 +19,8 @@ public class DayService {
         return new Day();
     }
 
-    public void setInitialMood(Integer key) {
-        day.setInitialMood(key);
+    public void setInitialMood(Integer mood) {
+        day.setInitialMood(mood);
     }
 
     public void setImprovementField(ImprovementField improvementField) {
@@ -35,7 +35,7 @@ public class DayService {
         day.createStepList();
     }
 
-    public void setFinalMood(Integer key) {
-        day.setFinalMood(key);
+    public void setFinalMood(Integer mood) {
+        day.setFinalMood(mood);
     }
 }

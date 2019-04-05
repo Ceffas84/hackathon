@@ -28,12 +28,15 @@ public class UserService {
         user.setDay(dayService.createDay());
     }
 
-    public int getPoints() {
-        return user.getPoints();
+    public void addPoints() {
+        if (user.getPoints() == 0) {
+            user.setPoints(user.getPoints() + 2);
+        }
+        user.setPoints(user.getPoints() * 2);
     }
 
-    public void setPoints() {
-        user.setPoints();
+    public int getPoints() {
+        return user.getPoints();
     }
 }
 

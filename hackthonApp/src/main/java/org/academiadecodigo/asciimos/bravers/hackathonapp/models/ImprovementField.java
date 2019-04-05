@@ -15,7 +15,7 @@ public class ImprovementField {
     public List<Step> populateList() {
         stepsList = new LinkedList<>();
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 3; i++) {
             stepsList.add(StepFactory.getStep());
         }
         return stepsList;

@@ -1,22 +1,34 @@
 package org.academiadecodigo.asciimos.bravers.hackathonapp.models.moods;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.Map;
 
+@Component
 public class Mood {
 
-    private MoodType moodType;
-    private Map<Integer, MoodType> moods = new HashMap<>();
+    private Map<Integer, String> moods = new HashMap<>();
 
     public void populateMap() {
-        moods.put(1, MoodType.BOLDLY_BRAVE);
-        moods.put(2, MoodType.UPBEAT);
-        moods.put(3, MoodType.COLD_FEET);
-        moods.put(4, MoodType.DOWNBEAT);
+        moods.put(1, MoodType.BOLDLY_BRAVE.getMoodString());
+        moods.put(2, MoodType.UPBEAT.getMoodString());
+        moods.put(3, MoodType.COLD_FEET.getMoodString());
+        moods.put(4, MoodType.DOWNBEAT.getMoodString());
     }
 
-    public MoodType getMoodType(Integer key) {
-        return moods.get(key);
+
+    /*private MoodType[] possibleMoods;
+
+    public void moods() {
+       String brave = "boldly-brave";
+       String upbeat = "upbeat";
+       String cold = "cold-feet";
+       String downbeat = "downbeat";
+    }*/
+
+    public String getMoodType(Integer mood) {
+        return moods.get(mood);
     }
 
 }

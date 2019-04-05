@@ -2,6 +2,7 @@ package org.academiadecodigo.asciimos.bravers.hackathonapp.models;
 
 
 import org.academiadecodigo.asciimos.bravers.hackathonapp.models.moods.Mood;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -15,9 +16,16 @@ public class Day {
     private String finalMood;
     private Mood mood;
 
+    @Autowired
+    public void setMood(Mood mood) {
+        this.mood = mood;
+    }
 
-    public Day () {
+    public Day() {
         date = new Date();
+        improvementField = new ImprovementField();
+        initialMood = "upbeat";
+        finalMood = "boldly-brave";
     }
 
     public ImprovementField getImprovementField() {
@@ -32,16 +40,16 @@ public class Day {
         return initialMood;
     }
 
-    public void setInitialMood(Integer key) {
-        this.initialMood = mood.getMoodType(key).getMoodString();
+    public void setInitialMood(Integer mood) {
+        initialMood = this.mood.getMoodType(mood);
     }
 
     public String getFinalMood() {
         return finalMood;
     }
 
-    public void setFinalMood(Integer key) {
-        this.finalMood = mood.getMoodType(key).getMoodString();
+    public void setFinalMood(Integer mood) {
+        this.finalMood = this.mood.getMoodType(mood);
     }
 
     public void createMoodMap() {

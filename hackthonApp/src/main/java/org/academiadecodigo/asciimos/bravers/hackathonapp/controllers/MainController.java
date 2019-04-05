@@ -34,80 +34,94 @@ public class MainController {
 
     @GetMapping(path = "user")
     public String getUser() {
+        dayService.createMoodMap();
         userService.createUser();
         userService.setDay();
-        dayService.createMoodMap();
         return "/initialMood";
     }
 
-    @PostMapping(path = "user/initialMood")
-    public String setUserMood(@ModelAttribute("key") Integer key) {
-        dayService.setInitialMood(key);
+    @GetMapping(path = "initialMood{mood}")
+    public String setUserMood(@PathVariable(name = "mood") Integer mood) {
+        dayService.setInitialMood(mood);
         return "redirect:/field";
     }
 
-    @GetMapping(path = "field")
+    @GetMapping(path = "showField")
     public String showFields() {
         dayService.createStepList();
         return "/field";
     }
 
 
-    @PostMapping(path = "user/field")
+    @GetMapping(path = "field")
     public String setFieldImprovement(@ModelAttribute("improvementField") ImprovementField improvementField) {
         dayService.setImprovementField(improvementField);
-        return "redirect:/step1";
+        return "redirect:/showStep1";
     }
 
-    @GetMapping(path = "socialField")
+    @GetMapping(path = "showStep1")
     public String getStepOne() {
         return "/step1";
     }
 
-    @PostMapping(path = "stepOne/{boolean}")
-    public String getStepTwo(@PathVariable(name = "boolean") Boolean b) {
-        if(b){
+    @GetMapping(path = "step1")
+    public String getStepTwo(@RequestParam(name = "completed") String completed) {
+        if(completed.equals("true")){
             stepService.turnToAchieved();
-            userService.setPoints();
-            return "redirect:/step2";
+            userService.addPoints();
+            return "redirect:/showStep2";
         }
-        return "redirect:/step2";
+        return "redirect:/showStep2";
     }
 
-    @PostMapping(path = "stepTwo/{boolean}")
-    public String getStepThree(@PathVariable(name = "boolean") Boolean b) {
-        if(b){
-            stepService.turnToAchieved();
-            userService.setPoints();
-            return "redirect:/step3";
-        }
-        return "redirect:/step3";
+    @GetMapping(path = "showStep2")
+    public String showStepTwo() {
+        return "/step2";
     }
 
-    @PostMapping(path = "stepThree/{boolean}")
-    public String get(@PathVariable(name = "boolean") Boolean b) {
-
-
-
-        if(b){
+    @GetMapping(path = "step2")
+    public String getStepThree(@RequestParam(name = "completed") String completed) {
+        if(completed.equals("true")){
             stepService.turnToAchieved();
-            userService.setPoints();
-            return "redirect:/finalMood";
+            userService.addPoints();
+            return "redirect:/showStep3";
+        }
+        return "redirect:/showStep3";
+    }
+
+    @GetMapping(path = "showStep3")
+    public String showStepThree() {
+        return "/step3";
+    }
+
+    @GetMapping(path = "step3")
+    public String get(@RequestParam(name = "completed") String completed) {
+
+        if(completed.equals("true")){
+            stepService.turnToAchieved();
+            userService.addPoints();
+            return "redirect:/showFinalMood";
         }
         if (userService.getPoints() != 0) {
-            return "redirect:/finalMood";
+            return "redirect:/showFinalMood";
         }
         return "redirect:/failPage";
     }
 
-    @GetMapping(path = "finalMood")
+    @GetMapping(path = "failPage")
+    public String showFailPage() {
+        return "/failPage";
+    }
+
+
+    @GetMapping(path = "showFinalMood")
     public String showFinalMood() {
         return "/finalMood";
     }
 
-    @PostMapping(path = "user/finalMood")
-    public String setUserFinalMood(@ModelAttribute("key") Integer key) {
-        dayService.setFinalMood(key);
+    @GetMapping(path = "finalMood{mood}")
+    public String setUserFinalMood(@PathVariable("mood") Integer mood) {
+        dayService.setFinalMood(mood);
         return "redirect:/graphic";
     }
 
